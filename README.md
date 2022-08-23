@@ -2,7 +2,9 @@
 
 # OpenMRS ESM Module Management App
 
-This repository is a module for the OpenMRS healthcare platform which enables uses to manage modules. It lists all the installed modules and allows admin users to control modules using Start, Stop and Unload actions. Users can also view detailed information about the listed modules. This includes metadata such as the module author, version, required OpenMRS version, and more. 
+The OpenMRS ESM Module Management app is an application built using the ESM template app seed. It is meant to serve as a learning resource for our coding conventions and best practices when building a microfrontend. 
+
+This apps mimics the SysAdmin-Manage Module page from the OpenMRS 2.x reference application. It allows uses manage modules. It lists all the installed modules and allows admin users to control modules using Start, Stop and Unload actions. Users can also view detailed information about the listed modules. This includes metadata such as the module author, version, required OpenMRS version, and more.
 
 ## Running this code
 
