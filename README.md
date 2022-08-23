@@ -1,10 +1,11 @@
-![Node.js CI](https://github.com/openmrs/openmrs-esm-module-management-app/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://github.com/openmrs/openmrs-esm-module-management-app/workflows/Node.js%20CI/badge.svg) 
+![](https://img.shields.io/badge/built%20with-openmrs--esm--template--app-brightgreen)
 
 # OpenMRS ESM Module Management App
 
 The OpenMRS ESM Module Management app is an application built using the ESM template app seed. It is meant to serve as a learning resource for our coding conventions and best practices when building a microfrontend. 
 
-This apps mimics the SysAdmin-Manage Module page from the OpenMRS 2.x reference application. It allows uses manage modules. It lists all the installed modules and allows admin users to control modules using Start, Stop and Unload actions. Users can also view detailed information about the listed modules. This includes metadata such as the module author, version, required OpenMRS version, and more.
+This apps mimics the System Administration Manage Module management page from the OpenMRS 2.x reference application. It allows uses manage modules. It lists all the installed modules and allows admin users to control modules using `Start`, `Stop` and `Unload` actions. Users can also view detailed information about the listed modules. This includes metadata such as the module author, version, required OpenMRS version, and more.
 
 ## Running this code
 
