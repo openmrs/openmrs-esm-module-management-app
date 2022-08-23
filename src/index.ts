@@ -48,16 +48,16 @@ const backendDependencies = {
  * rendered.
  *
  * In this example, our return object contains a single page definition.
- * It tells the app shell that the default export of `greeter.tsx`
- * should be rendered when the route matches `hello`. The full route
- * will be `openmrsSpaBase() + 'hello'`, which is usually
- * `/openmrs/spa/hello`.
+ * It tells the app shell that the default export of `Root.tsx`
+ * should be rendered when the route matches `module-management`. The full route
+ * will be `openmrsSpaBase() + 'module-management'`, which is usually
+ * `/openmrs/spa/module-management`.
  */
 function setupOpenMRS() {
-  const moduleName = "@openmrs/esm-template-app";
+  const moduleName = "@openmrs/esm-module-management-app";
 
   const options = {
-    featureName: "hello-world",
+    featureName: "module-management",
     moduleName,
   };
 
@@ -66,35 +66,21 @@ function setupOpenMRS() {
   return {
     pages: [
       {
-        load: getAsyncLifecycle(() => import("./hello"), options),
-        route: "hello",
+        load: getAsyncLifecycle(() => import("./root"), options),
+        route: "module-management",
       },
     ],
     extensions: [
+      // Adds a link to the Module Management app in the App Switcher
       {
-        id: "Red box",
+        name: "module-management-app-link",
+        slot: "app-menu-slot",
         load: getAsyncLifecycle(
-          () => import("./boxes/extensions/red-box"),
+          () => import("./module-management-app-menu-link"),
           options
         ),
-        slot: "Boxes",
-      },
-      {
-        id: "Blue box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/blue-box"),
-          options
-        ),
-        slot: "Boxes",
-        // same as `slots: ["Boxes"],`
-      },
-      {
-        id: "Brand box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/brand-box"),
-          options
-        ),
-        slot: "Boxes",
+        online: true,
+        offline: true,
       },
     ],
   };

@@ -1,0 +1,111 @@
+@import '~@openmrs/esm-styleguide/src/vars';
+@import '~carbon-components/src/globals/scss/mixins';
+
+.container {
+  padding: 2rem;
+}
+
+.emptyState {
+  @extend .container;
+  margin-top: 6rem;
+}
+
+.title {
+  @include carbon--type-style('productive-heading-02');
+  margin-bottom: 1rem;
+}
+
+.subTitle {
+  @include carbon--type-style('productive-heading-01');
+  margin-bottom: 1rem;
+}
+
+.section {
+  margin: 2rem 0rem;
+}
+
+.tile {
+  border: 1px solid $ui-03;
+  min-height: fit-content;
+}
+
+.coloredTile {
+  @extend .tile;
+  color: #31708f;
+  background-color: #d9edf7;
+}
+
+.table {
+  width: 100%;
+
+  tr {
+    background-color: $ui-02;
+    border: 1px solid $ui-03;
+  }
+  
+  td, th {
+    padding: 0.75rem;
+  }
+  
+  th {
+    border: 1px solid $ui-03;
+    max-width: 10rem;
+    text-align: left;
+  }
+}
+
+.tableStriped {
+  @extend .table; 
+
+  tr:nth-child(even) {
+    background-color: $ui-01;
+  }
+}
+
+.backButton {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    display: flex;
+
+    svg {
+      order: 1;
+      margin-right: 0.5rem;
+    }  
+
+    span {
+      order: 2;
+    }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  margin: 1rem 0;
+
+    
+  button:first-child {
+    margin-right: 2rem;
+  }
+}
+
+.actionButton {
+  :global(.bx--btn__icon) {
+    position: initial;
+  }
+  
+  svg {
+    order: 1;
+    margin-right: 0.5rem;
+  }
+
+  span {
+    order: 2;
+  }
+}

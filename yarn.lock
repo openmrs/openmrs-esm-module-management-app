@@ -982,14 +982,14 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.9.2":
   version "7.18.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
   integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.1":
+"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.16.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.1":
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
   integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
@@ -3642,31 +3642,10 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001370, caniuse-lite@^1.0.30001373:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001374.tgz#3dab138e3f5485ba2e74bd13eca7fe1037ce6f57"
   integrity sha512-mWvzatRx3w+j5wx/mpFN5v5twlPrabG8NqX2c6e45LCpymdoGqNvRkRutFUqpRTXKFQFNQJasvK0YT7suW6/Hw==
 
-carbon-components-react@7.31.0:
-  version "7.31.0"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.31.0.tgz#dfa25971e0f33810411be656a9481b6eec3eafa7"
-  integrity sha512-zVX/x6kmVkQERmye9j9WezefmHavE7zJPzqbzC2C12T6X3gud6y1hq2VGnMauXby/NOaR5aP9Hr51iAfSoi2nQ==
-  dependencies:
-    "@carbon/feature-flags" "^0.2.0"
-    "@carbon/icons-react" "^10.28.0"
-    "@carbon/telemetry" "0.0.0-alpha.6"
-    classnames "2.2.6"
-    downshift "5.2.1"
-    flatpickr "4.6.9"
-    invariant "^2.2.3"
-    lodash.debounce "^4.0.8"
-    lodash.findlast "^4.5.0"
-    lodash.isequal "^4.5.0"
-    lodash.omit "^4.5.0"
-    lodash.throttle "^4.1.1"
-    react-is "^16.8.6"
-    use-resize-observer "^6.0.0"
-    window-or-global "^1.0.1"
-
-carbon-components-react@^7.25.0:
-  version "7.57.2"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.57.2.tgz#37266b9577b4d8ded6b2c9677fd8b866a1e231e3"
-  integrity sha512-qkdJLYjfBfDvSl43+LSU0/3MB9FYTMQvuiy/DSsD0//RtUndj3bn6DJyS3E0OLFssICoQyYMAnjTTjFtRfhK9A==
+carbon-components-react@7:
+  version "7.57.4"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.57.4.tgz#6e005e59f6ab09586e136b08b99dd93f06f4c446"
+  integrity sha512-Wm7aVmJahAgr6uMFYGiiStm1cPPETR5BHW0foLbkeQNiKoZ302HVqLFhpmYFWsMbiSWsRXqtchsBcwOeV3WtGA==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@carbon/feature-flags" "^0.7.0"
@@ -3687,6 +3666,27 @@ carbon-components-react@^7.25.0:
     react-is "^17.0.2"
     use-resize-observer "^6.0.0"
     wicg-inert "^3.1.1"
+    window-or-global "^1.0.1"
+
+carbon-components-react@7.31.0:
+  version "7.31.0"
+  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-7.31.0.tgz#dfa25971e0f33810411be656a9481b6eec3eafa7"
+  integrity sha512-zVX/x6kmVkQERmye9j9WezefmHavE7zJPzqbzC2C12T6X3gud6y1hq2VGnMauXby/NOaR5aP9Hr51iAfSoi2nQ==
+  dependencies:
+    "@carbon/feature-flags" "^0.2.0"
+    "@carbon/icons-react" "^10.28.0"
+    "@carbon/telemetry" "0.0.0-alpha.6"
+    classnames "2.2.6"
+    downshift "5.2.1"
+    flatpickr "4.6.9"
+    invariant "^2.2.3"
+    lodash.debounce "^4.0.8"
+    lodash.findlast "^4.5.0"
+    lodash.isequal "^4.5.0"
+    lodash.omit "^4.5.0"
+    lodash.throttle "^4.1.1"
+    react-is "^16.8.6"
+    use-resize-observer "^6.0.0"
     window-or-global "^1.0.1"
 
 carbon-components@10.31.0:
@@ -4049,9 +4049,9 @@ cookie@^0.4.1:
   integrity sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==
 
 copy-to-clipboard@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/copy-to-clipboard/-/copy-to-clipboard-3.3.1.tgz#115aa1a9998ffab6196f93076ad6da3b913662ae"
-  integrity sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/copy-to-clipboard/-/copy-to-clipboard-3.3.2.tgz#5b263ec2366224b100181dded7ce0579b340c107"
+  integrity sha512-Vme1Z6RUDzrb6xAI7EZlVZ5uvOk2F//GaxKUxajDqm9LhOVM1inxNAD2vy+UZDYsd0uyA9s7b3/FVZPSxqrCfg==
   dependencies:
     toggle-selection "^1.0.6"
 
@@ -8930,7 +8930,7 @@ swc-loader@^0.2.3:
   resolved "https://registry.yarnpkg.com/swc-loader/-/swc-loader-0.2.3.tgz#6792f1c2e4c9ae9bf9b933b3e010210e270c186d"
   integrity sha512-D1p6XXURfSPleZZA/Lipb3A8pZ17fP4NObZvFCDjK/OKljroqDpPmsBdTraWhVBqUNpcWBQY1imWdoPScRlQ7A==
 
-swr@^1.2.2:
+swr@^1.2.2, swr@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/swr/-/swr-1.3.0.tgz#c6531866a35b4db37b38b72c45a63171faf9f4e8"
   integrity sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==
