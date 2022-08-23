@@ -14,7 +14,9 @@ yarn  # to install dependencies
 yarn start  # to run the dev server
 ```
 
-Once it is running, a browser window should open with the OpenMRS 3 application. Log in and then navigate to `/openmrs/spa/module-management`. Alternatively, you could click the `Module Management` link in the app switcher from the home page.
+- Once it is running, a browser window should open with the OpenMRS 3 application. Log in and click the `Module Management` link in the App Switcher to launch the Module Management app.
+
+- Alternatively, you could click the `Module Management` link in the app switcher from the home page.
 
 ## Running tests
 
