@@ -1,5 +1,5 @@
+@use '@carbon/styles/scss/type';
 @import '~@openmrs/esm-styleguide/src/vars';
-@import '~carbon-components/src/globals/scss/mixins';
 
 .container {
   padding: 2rem;
@@ -11,12 +11,12 @@
 }
 
 .title {
-  @include carbon--type-style('productive-heading-02');
+  @include type.type-style('heading-compact-02');
   margin-bottom: 1rem;
 }
 
 .subTitle {
-  @include carbon--type-style('productive-heading-01');
+  @include type.type-style('heading-compact-01');
   margin-bottom: 1rem;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .actionButton {
-  :global(.bx--btn__icon) {
+  :global(.cds--btn__icon) {
     position: initial;
   }
   

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ModuleManagement from "./components/module-management.component";
 import ModuleInfo from "./components/module-info.component";
 
@@ -8,14 +8,12 @@ const Root = () => {
   return (
     <main>
       <BrowserRouter basename={window.spaBase}>
-        <Switch>
-          <Route exact path="/module-management">
-            <ModuleManagement />
+        <Routes>
+          <Route path="/module-management">
+            <Route path="" element={<ModuleManagement />} />
+            <Route path=":moduleUuid" element={<ModuleInfo />} />
           </Route>
-          <Route exact path="/module-management/:moduleUuid">
-            <ModuleInfo />
-          </Route>
-        </Switch>
+        </Routes>
       </BrowserRouter>
     </main>
   );

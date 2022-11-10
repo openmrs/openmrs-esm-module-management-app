@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import { useRouteMatch } from "react-router-dom";
 import {
   Button,
   DataTable,
@@ -16,15 +15,15 @@ import {
   TableToolbarContent,
   TableToolbarSearch,
   Tile,
-} from "carbon-components-react";
+} from "@carbon/react";
 import {
-  Add16,
-  CheckmarkFilled16,
-  CloseFilled16,
-  Play16,
-  Renew16,
-  Search16,
-} from "@carbon/icons-react";
+  Add,
+  CheckmarkFilled,
+  CloseFilled,
+  Play,
+  Renew,
+  Search,
+} from "@carbon/react/icons";
 import { ConfigurableLink, UserHasAccess } from "@openmrs/esm-framework";
 import { useModules } from "./module-management.resource";
 import styles from "./module-management.scss";
@@ -73,9 +72,9 @@ function ModuleManagement() {
           content: <ModuleInfoLink module={module} />,
         },
         status: module.started ? (
-          <CheckmarkFilled16 className={styles.runningIcon} />
+          <CheckmarkFilled size={16} className={styles.runningIcon} />
         ) : (
-          <CloseFilled16 className={styles.stoppedIcon} />
+          <CloseFilled size={16} className={styles.stoppedIcon} />
         ),
       })),
     [modules]
@@ -161,7 +160,7 @@ function ModuleManagement() {
         filterRows={handleFilter}
         headers={headerData}
         rows={rowData}
-        size="tall"
+        size="xl"
         useZebraStyles
       >
         {({ rows, headers, getHeaderProps, getTableProps, onInputChange }) => (
@@ -223,21 +222,21 @@ function ActionButtons() {
       <div>
         <Button
           className={styles.actionButton}
-          renderIcon={Add16}
+          renderIcon={(props) => <Add size={16} {...props} />}
           kind="tertiary"
         >
           <span>Add / Upgrade Modules</span>
         </Button>
         <Button
           className={styles.actionButton}
-          renderIcon={Search16}
+          renderIcon={(props) => <Search size={16} {...props} />}
           kind="tertiary"
         >
           <span>Search from Addons</span>
         </Button>
         <Button
           className={styles.actionButton}
-          renderIcon={Renew16}
+          renderIcon={(props) => <Renew size={16} {...props} />}
           kind="tertiary"
         >
           <span>Check for Updates</span>
@@ -245,7 +244,7 @@ function ActionButtons() {
       </div>
       <Button
         className={styles.actionButton}
-        renderIcon={Play16}
+        renderIcon={(props) => <Play size={16} {...props} />}
         kind="primary"
       >
         <span>Start All</span>
@@ -259,10 +258,10 @@ function ActionButtons() {
  * @param module A module object
  */
 function ModuleInfoLink({ module }) {
-  const { path } = useRouteMatch();
-
   return (
-    <ConfigurableLink to={`\${openmrsSpaBase}${path}/${module.uuid}`}>
+    <ConfigurableLink
+      to={`\${openmrsSpaBase}/module-management/${module.uuid}`}
+    >
       <span>{module.name}</span>
     </ConfigurableLink>
   );
