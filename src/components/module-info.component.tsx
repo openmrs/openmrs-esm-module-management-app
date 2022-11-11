@@ -1,12 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Button, DataTableSkeleton, Tile } from "carbon-components-react";
-import {
-  ArrowLeft24,
-  Play16,
-  Renew16,
-  StopFilled16,
-} from "@carbon/icons-react";
+import { Button, DataTableSkeleton, Tile } from "@carbon/react";
+import { ArrowLeft, Play, Renew, StopFilled } from "@carbon/react/icons";
 import { ConfigurableLink, UserHasAccess } from "@openmrs/esm-framework";
 import { RestModule, useModule } from "./module-info.resource";
 import styles from "./module-info.scss";
@@ -21,7 +16,7 @@ interface ModuleListProps {
 
 function ModuleInfo() {
   // Grab the `moduleUuid` URL parameter from the URL
-  const { moduleUuid } = useParams<UrlParams>();
+  const { moduleUuid } = useParams();
   const { module, isError, isLoading } = useModule(moduleUuid);
 
   // Loading state
@@ -66,7 +61,7 @@ function ModuleInfo() {
         <ConfigurableLink to={`${window.spaBase}/module-management`}>
           <Button
             kind="ghost"
-            renderIcon={ArrowLeft24}
+            renderIcon={(props) => <ArrowLeft size={24} {...props} />}
             iconDescription="Return to Module List"
             size="sm"
           >
@@ -119,7 +114,7 @@ function ActionButtons({ module }: { module: RestModule }) {
       {module.started ? (
         <Button
           className={styles.actionButton}
-          renderIcon={StopFilled16}
+          renderIcon={(props) => <StopFilled size={16} {...props} />}
           kind="danger--ghost"
         >
           <span>Stop</span>
@@ -127,7 +122,7 @@ function ActionButtons({ module }: { module: RestModule }) {
       ) : (
         <Button
           className={styles.actionButton}
-          renderIcon={Play16}
+          renderIcon={(props) => <Play size={16} {...props} />}
           kind="primary"
         >
           <span>Start</span>
@@ -136,7 +131,7 @@ function ActionButtons({ module }: { module: RestModule }) {
 
       <Button
         className={styles.actionButton}
-        renderIcon={Renew16}
+        renderIcon={(props) => <Renew size={16} {...props} />}
         kind="tertiary"
       >
         <span>Check for Updates</span>

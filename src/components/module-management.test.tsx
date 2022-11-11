@@ -62,6 +62,8 @@ it("renders an error state view if there was a problem fetching module data", as
 });
 
 it("renders detailed information about the module", async () => {
+  const user = userEvent.setup();
+
   const testModules = [
     {
       uuid: "initializer",
@@ -166,15 +168,15 @@ it("renders detailed information about the module", async () => {
   const searchbox = screen.getByRole("searchbox", { name: /filter table/i });
 
   // search for the Serializer module
-  await userEvent.type(searchbox, "Seri");
+  await user.type(searchbox, "Seri");
 
   expect(screen.getByText(/Serialization Xstream/i)).toBeInTheDocument();
   expect(screen.queryByText(/Initializer/i)).not.toBeInTheDocument();
 
-  await userEvent.clear(searchbox);
+  await user.clear(searchbox);
 
   // search for something that doesn't exist in the module list
-  await userEvent.type(searchbox, "super-duper-unreleased-module");
+  await user.type(searchbox, "super-duper-unreleased-module");
 
   expect(screen.queryByText(/Serialization Xstream/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/Initializer/i)).not.toBeInTheDocument();
